@@ -25,6 +25,7 @@ const Login = () => {
         email: data.email,
         password: data.password,
       });
+      console.log(dataUser); 
       if (!error) {
         console.log("inside if condition")
         console.log(data);
@@ -36,7 +37,7 @@ const Login = () => {
     }
   };
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setData((prev: any) => ({
       ...prev,
