@@ -2,10 +2,10 @@
 import { Button } from "@/components/ui/button"
 import { supabase } from "@/lib/supabase"
 import {useRouter} from "next/navigation"
-const authenticated = () => {
+const Authenticated = () => {
   const router = useRouter();
 
-   let signout = async ()=>{
+   const signout = async ()=>{
     try {
       const { error } = await supabase.auth.signOut();
       if (error) {
@@ -27,4 +27,4 @@ const authenticated = () => {
   )
 }
 
-export default authenticated
+export default Authenticated
